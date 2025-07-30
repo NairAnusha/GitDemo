@@ -1,0 +1,35 @@
+
+public class Palindrome {
+
+	public static void main(String[] args) {
+		
+		String s="madam";
+		String t="";
+		
+		for(int i=s.length()-1;i>=0;i--)
+		{
+			t=t+s.charAt(i);
+		}
+		System.out.println(t);
+		if(t.equals(s)) {
+			System.out.println( t+ " is palindrome");
+		
+		}
+		else
+		{
+			System.out.println(t+ " is not palindrome");
+		}
+		
+//		StringBuffer st=new StringBuffer("hero");
+//		System.out.println(st.replace(1, 2, "richu"));
+//		st.reverse();
+//		
+//		System.out.println(st.replace(1, 2, "richu"));
+//		
+//		System.out.println(st);
+	//Auto-generated method stub
+
+	}}
+	
+
+

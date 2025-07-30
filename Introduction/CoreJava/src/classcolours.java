@@ -1,0 +1,19 @@
+
+public class classcolours extends Parentclass{
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		classcolours c=new classcolours();
+		
+		c.colour();
+		c.engine();
+		c.guidelines();
+
+	}
+
+	@Override
+	public void colour() {
+		// TODO Auto-generated method stub
+		System.out.println("emirat flag on body red");}
+
+}

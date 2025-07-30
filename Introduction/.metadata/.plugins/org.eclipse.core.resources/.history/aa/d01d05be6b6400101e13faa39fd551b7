@@ -1,0 +1,41 @@
+
+public class Palindrome {
+
+	public static void main(String[] args) {
+		
+//		String s="anusha";
+//		String t="";
+//		
+//		for(int i=s.length()-1;i>=0;i--)
+//		{
+//			t=t+s.charAt(i);
+//		}
+//		System.out.println(t);
+//		if(t.equals(s)) {
+//			System.out.println("it is palindrome");
+//		
+//		}
+//		else
+//		{
+//			System.out.println("not palindrome");
+//		}
+		
+		StringBuffer st=new StringBuffer("hero");
+		System.out.println(st.replace(1, 2, "richu"));
+		st.reverse();
+		
+		String sa="herorichu";
+		if(sa.equals(st)) {
+			System.out.println(st+ "is not a palindrome");
+			
+		}
+		
+		System.out.println(st.replace(1, 2, "richu"));
+		
+		System.out.println(st);
+	//Auto-generated method stub
+
+	}}
+	
+
+

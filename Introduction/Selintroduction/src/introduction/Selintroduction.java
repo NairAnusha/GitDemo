@@ -1,0 +1,47 @@
+package introduction;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import java.time.Duration;
+//import org.openqa.selenium.edge.EdgeDriver;
+//import org.openqa.selenium.firefox.FirefoxDriver;
+
+public class Selintroduction {
+
+	public static void main(String[] args) {
+
+		// invoking chrome browse manually using chrome driver file
+		
+//System.setProperty("webdriver.chrome.driver","C:\\Users\\anush\\OneDrive\\Documents\\chromedriver-win64\\chromedriver.exe");
+
+
+		WebDriver driver0=new ChromeDriver();
+
+//invoking firefox  browser;
+
+		//WebDriver driver1=new FirefoxDriver();
+		
+		//invoking edge  browser;
+		
+		//WebDriver driver2=new EdgeDriver();
+		
+driver0.get("https://rahulshettyacademy.com/locatorspractice");
+driver0.manage().timeouts().implicitlyWait(Duration.ofSeconds(1000));
+System.out.println(driver0.getTitle());
+
+System.out.println(driver0.getCurrentUrl());
+
+driver0.manage().timeouts().implicitlyWait(Duration.ofSeconds(1000));
+try {
+	Thread.sleep(2000);
+} catch (InterruptedException e) {
+	// TODO Auto-generated catch block
+	e.printStackTrace();
+}
+driver0.close();
+//driver.quit():
+		
+	}
+
+	
+}

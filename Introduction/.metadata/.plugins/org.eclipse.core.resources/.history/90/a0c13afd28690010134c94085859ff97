@@ -1,0 +1,29 @@
+package introduction;
+
+import java.time.Duration;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class Locatorpractice3 {
+
+	public static void main(String[] args) throws InterruptedException {
+		// TODO Auto-generated method stub
+		WebDriver driver0=new ChromeDriver();
+		driver0.manage().window().maximize();
+		driver0.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+		
+		driver0.get("https://rahulshettyacademy.com/AutomationPractice/");
+		System.out.println(driver0.getCurrentUrl());
+		driver0.findElement(By.xpath("//header/div/a")).click();
+		Thread.sleep(2000);
+		System.out.println(driver0.getCurrentUrl());
+		driver0.navigate().back();
+		driver0.findElement(By.xpath("//header/div/button[1]")).click();
+		driver0.navigate().back();
+		driver0.findElement(By.xpath("//header/div/button[1]/following-sibling::button[1]")).click();
+
+	}
+
+}

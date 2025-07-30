@@ -1,0 +1,21 @@
+
+public class datatypes {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+byte smallNumber=123;
+short mednum=2345;
+int i=33940;
+long longnum=23345333343434L;
+
+float decimal=3.4f;
+double decimal2=3.13434;
+System.out.println(i);
+System.out.println("byte is " +smallNumber);
+System.out.println(decimal2);
+System.out.println(longnum);
+System.out.println(mednum);
+System.out.println(decimal);
+	}
+
+}

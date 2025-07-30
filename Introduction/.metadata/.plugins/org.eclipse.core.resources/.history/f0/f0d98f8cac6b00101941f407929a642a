@@ -1,0 +1,29 @@
+package introduction;
+
+import java.time.Duration;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class Calendar {
+
+	public static void main(String[] args) throws InterruptedException {
+		// TODO Auto-generated method stubWebDriver driver0=new ChromeDriver();
+		WebDriver driver0=new ChromeDriver();
+
+		driver0.manage().window().maximize();
+		driver0.manage().timeouts().implicitlyWait(Duration.ofSeconds( 10));
+		
+		driver0.get("https://rahulshettyacademy.com/dropdownsPractise/");
+		driver0.findElement(By.id("ctl00_mainContent_ddl_originStation1_CTXT")).click();
+		driver0.findElement(By.xpath("//a[@value='BLR']")).click();
+		Thread.sleep(2000);
+		driver0.findElement(By.xpath("(//a[@value='DIB'])[2]")).click();
+		driver0.findElement(By.xpath("//div[@id='glsctl00_mainContent_ddl_destinationStation1_CTNR'] //a[@value='JLR']")).click();
+		driver0.findElement(By.className("a.ui-state-default ui-state-active")).click();
+
+
+	}
+
+}

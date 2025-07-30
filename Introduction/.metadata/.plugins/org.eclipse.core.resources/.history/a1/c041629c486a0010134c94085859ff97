@@ -1,0 +1,29 @@
+package introduction;
+
+import java.time.Duration;
+import java.util.List;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class Autosuggestivedrops {
+
+	public static void main(String[] args) throws InterruptedException {
+		WebDriver driver0=new ChromeDriver();
+		driver0.manage().window().maximize();
+		driver0.manage().timeouts().implicitlyWait(Duration.ofSeconds( 10));
+		
+		driver0.get("https://rahulshettyacademy.com/dropdownsPractise/");
+		driver0.findElement(By.id("autosuggest")).sendKeys("bri");
+		Thread.sleep(3000);
+		List<WebElement> options=driver0.findElements(By.cssSelector("li[class='ui-menu-item']"));
+			
+				for(WebElement option :options)
+				{
+					if(option.getText().equalsIgnoreCase("Virgin Islands"))
+					{
+						option.click();
+						break;
+					}}}}

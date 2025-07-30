@@ -1,0 +1,19 @@
+
+public class str {
+
+	public static void main(String[] args) {
+		String s="richu's lullabies";
+		
+		String s1=new String("anu's and sara's  playlist");
+		
+		System.out.println(s1);
+		
+		String[] sara=s1.split(" ");
+		System.out.println(sara[3].trim());
+		
+		System.out.println(sara[0]);
+System.out.println(s.charAt(5));
+System.out.println(s.substring(3));
+	}
+
+}

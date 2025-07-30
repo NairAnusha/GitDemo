@@ -1,0 +1,28 @@
+public class Exercise1 {
+
+	public static void main(String[] args) {
+		
+		       int[] num={1,2,10,23,42};
+		       System.out.println("The first element of the array is " + num[0]);
+		        System.out.println("The last element of the array is " + num[num.length-1]);
+		        
+		       for(int i=num.length-1;i>=0; i--) {
+		      System.out.print(num[i]+"\t");
+		       
+		       int count=0;
+		       for(int j=0;i<num.length;j++)
+		       {
+		   	   count++;
+		 	       }
+		       System.out.println("Array length using counter: " + count);
+		    }
+
+		
+		// TODO Auto-generated method stub
+
+}
+
+
+}
+
+

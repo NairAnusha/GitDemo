@@ -1,0 +1,16 @@
+
+public class str {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		String s="richu's lullabies";
+		
+		String s1=new String("anu'splaylist");
+		s1.split(" ");
+		
+		System.out.println(s1);
+
+	}
+
+}

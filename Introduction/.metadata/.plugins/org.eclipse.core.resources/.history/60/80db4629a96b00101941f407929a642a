@@ -1,0 +1,48 @@
+package introduction;
+
+import java.time.Duration;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.Assert;
+
+public class Checkboxselection {
+
+	public static void main(String[] args) throws InterruptedException {
+		WebDriver driver0=new ChromeDriver();
+		driver0.manage().window().maximize();
+		driver0.manage().timeouts().implicitlyWait(Duration.ofSeconds( 10));
+		
+		driver0.get("https://rahulshettyacademy.com/dropdownsPractise/");
+		//System.out.println(driver0.findElement(By.cssSelector("[id*='friendsandfamily']")).isSelected());
+		
+		Assert.assertFalse(driver0.findElement(By.cssSelector("[id*='friendsandfamily']")).isSelected());
+		
+		driver0.findElement(By.cssSelector("[id*='friendsandfamily']")).click();
+		
+		Assert.assertTrue(driver0.findElement(By.cssSelector("[id*='friendsandfamily']")).isSelected());
+		
+		//System.out.println(driver0.findElement(By.cssSelector("[id*='friendsandfamily']")).isSelected());
+		
+		//count no.of checkboxes:
+		
+		System.out.println(driver0.findElements(By.cssSelector("input[type='checkbox']")).size());
+		Assert.assertEquals(driver0.findElements(By.cssSelector("input[type='checkbox']")).size(), 6);
+		
+		Thread.sleep(2000);
+		driver0.findElement(By.xpath("//a[@value='BLR']")).click();
+		
+		Thread.sleep(2000);
+		driver0.findElement(By.xpath("(//a[@value='DIB'])[2]")).click();
+		driver0.findElement(By.xpath("//div[@id='glsctl00_mainContent_ddl_destinationStation1_CTNR'] //a[@value='JLR']")).click();
+		driver0.findElement(By.cssSelector("a.ui-state-default.ui-state-active")).click();
+		
+
+		
+		//driver0.findElement(By.cssSelector("button.ui-datepicker-trigger")).click();
+		
+
+	}
+
+}

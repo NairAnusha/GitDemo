@@ -1,0 +1,38 @@
+package introduction;
+
+import java.time.Duration;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.Select;
+import org.testng.Assert;
+
+public class Exercise2 {
+
+	public static void main(String[] args) {
+			
+			WebDriver driver=new ChromeDriver();
+			driver.manage().window().maximize();
+			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+			driver.get("https://rahulshettyacademy.com/angularpractice/");
+			
+			driver.findElement(By.name("name")).sendKeys("Anusha Nair");
+			driver.findElement(By.cssSelector("input[name='email']")).sendKeys("anushanair255gmail.com");
+			driver.findElement(By.xpath("//input[@placeholder='Password']")).sendKeys("Lily@7ly");
+			driver.findElement(By.id("exampleCheck1")).click();
+			
+			driver.findElement(By.id("exampleFormControlSelect1")).click();
+			
+			WebElement s=driver.findElement(By.id("exampleFormControlSelect1"));
+			
+			Select dropdown=new Select(s);
+			dropdown.selectByVisibleText("Female");
+			
+			driver.findElement(By.id("inlineRadio1")).click();
+			driver.findElement(By.cssSelector("input[name='bday']")).sendKeys("25-05-1994");
+			driver.findElement(By.className("btn-success")).click();
+			System.out.println(driver.findElement(By.cssSelector(".alert-success")).getText());
+
+}}

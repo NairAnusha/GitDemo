@@ -1,0 +1,21 @@
+
+public class str {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		String s="richu's lullabies";
+		
+		String s1=new String("anu's and sara's playlist");
+		s1.split(" ");
+		
+		System.out.println(s1);
+		
+		String[] sara=s1.split("playlist");
+		System.out.println(sara[0].trim());
+		
+		System.out.println(sara[0]);
+
+	}
+
+}

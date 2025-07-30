@@ -1,0 +1,26 @@
+package introduction;
+
+import java.time.Duration;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class locatorpractice2 {
+
+	public static void main(String[] args) {
+		WebDriver driver0=new ChromeDriver();
+		driver0.manage().window().maximize();
+		driver0.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+		
+		driver0.get("https://rahulshettyacademy.com/locatorspractice");
+		System.out.println(driver0.getTitle());
+		
+		driver0.findElement(By.id("inputUsername")).sendKeys("anushanair255@gmail.com");
+		driver0.findElement(By.name("inputPassword")).sendKeys("rahulshettyacademy");
+		driver0.findElement(By.className("signInBtn")).click();
+		// TODO Auto-generated method stub
+
+	}
+
+}

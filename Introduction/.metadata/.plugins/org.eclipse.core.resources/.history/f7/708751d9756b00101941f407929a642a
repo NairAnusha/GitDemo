@@ -1,0 +1,25 @@
+package introduction;
+
+import java.time.Duration;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class Checkboxexercise1 {
+
+	public static void main(String[] args) {
+		
+		WebDriver driver0=new ChromeDriver();
+		driver0.manage().window().maximize();
+		driver0.manage().timeouts().implicitlyWait(Duration.ofSeconds( 10));
+		driver0.get("https://rahulshettyacademy.com/AutomationPractice/");
+		
+		driver0.findElement(By.name("checkBoxOption1")).click();
+		System.out.println(driver0.findElement(By.name("checkBoxOption1")).isSelected());
+		driver0.findElement(By.name("checkBoxOption1")).click();
+		System.out.println(driver0.findElement(By.name("checkBoxOption1")).isSelected());
+
+	}
+
+}
